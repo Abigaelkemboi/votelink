@@ -5,9 +5,7 @@ import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Controller('organizations')
 export class OrganizationsController {
-  constructor(
-    private readonly organizationsService: OrganizationsService,
-  ) {}
+  constructor(private readonly organizationsService: OrganizationsService) {}
 
   @UseGuards(JwtAuthGuard)
   @Post()
